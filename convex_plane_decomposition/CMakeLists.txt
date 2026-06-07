@@ -5,6 +5,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(ament_cmake REQUIRED)
 find_package(grid_map_core REQUIRED)
@@ -12,7 +13,7 @@ find_package(grid_map_cv REQUIRED)
 find_package(grid_map_filters_rsl REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
-find_package(CGAL QUIET)
+find_package(CGAL REQUIRED)
 find_package(GMP REQUIRED)
 find_package(MPFR REQUIRED)
 
@@ -47,8 +48,8 @@ ament_target_dependencies(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
   ${OpenCV_LIBRARIES}
   Eigen3::Eigen
-  gmp
-  mpfr
+  ${GMP_LIBRARIES}
+  ${MPFR_LIBRARIES}
 )
 
 

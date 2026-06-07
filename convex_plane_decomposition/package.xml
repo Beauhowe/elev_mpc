@@ -13,6 +13,9 @@
   <depend>grid_map_filters_rsl</depend>
 
   <build_depend>eigen3_cmake_module</build_depend>
+  <depend>libcgal-dev</depend>
+  <depend>libgmp-dev</depend>
+  <depend>libmpfr-dev</depend>
   <depend>libopencv-dev</depend>
 
   <export>
