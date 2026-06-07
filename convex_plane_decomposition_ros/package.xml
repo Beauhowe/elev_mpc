@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>convex_plane_decomposition_ros</name>
+  <version>0.0.1</version>
+  <description>The convex_plane_decomposition_ros package</description>
+  <maintainer email="rgrandia@ethz.ch">Ruben Grandia</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>grid_map_core</depend>
+  <depend>grid_map_ros</depend>
+  <depend>grid_map_cv</depend>
+  <depend>grid_map_msgs</depend>
+  <depend>grid_map_filters_rsl</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>convex_plane_decomposition</depend>
+  <depend>convex_plane_decomposition_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>visualization_msgs</depend>
+  <depend>tinyxml2_vendor</depend>
+  <depend>libopencv-dev</depend>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

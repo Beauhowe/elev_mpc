@@ -1,0 +1,20 @@
+convex_plane_decomposition_ros:
+  ros__parameters:
+    world_file: ""
+    target_frame_id: odom
+    base_frame_id: base
+    height_layer: elevation
+    submap:
+      width: 5.0
+      length: 5.0
+    resolution: 0.03
+    map_padding: 3.0
+    ground_height: 0.0
+    frequency: 20.0
+    use_robot_submap: true
+    publish_to_controller: true
+    raw_elevation_topic: /elevation_mapping/elevation_map_raw
+    planar_terrain_topic: planar_terrain
+    filtered_map_topic: filtered_map
+    boundaries_topic: boundaries
+    insets_topic: insets
