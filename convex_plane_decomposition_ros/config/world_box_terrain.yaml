@@ -11,7 +11,7 @@ convex_plane_decomposition_ros:
     map_padding: 3.0
     ground_height: 0.0
     frequency: 20.0
-    use_robot_submap: true
+    use_robot_submap: false
     publish_to_controller: true
     raw_elevation_topic: /elevation_mapping/elevation_map_raw
     planar_terrain_topic: planar_terrain
