@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>grid_map_sdf</name>
+  <version>1.7.18</version>
+  <description>Generates signed distance fields from grid maps.</description>
+  <maintainer email="mgaertner@anybotics.com">Magnus Gaertner</maintainer>
+  <maintainer email="magostinucci@anybotics.com">Mathieu Agostinucci</maintainer>
+  <license>BSD</license>
+  <url type="website">http://github.com/anybotics/grid_map</url>
+  <url type="bugtracker">http://github.com/anybotics/grid_map/issues</url>
+  <author email="takahiro.miki1992@gmail.com">Takahiro Miki</author>
+  <author email="pfankhauser@anybotics.com">Péter Fankhauser</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>grid_map_core</depend>
+
+  <build_depend>eigen3_cmake_module</build_depend>
+  <depend>eigen</depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
