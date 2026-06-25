@@ -23,7 +23,8 @@ ConvexPlaneExtractionROS::ConvexPlaneExtractionROS(const rclcpp::Node::SharedPtr
 
   if (parametersLoaded) {
     elevationMapSubscriber_ = node_->create_subscription<grid_map_msgs::msg::GridMap>(
-        elevationMapTopic_, rclcpp::QoS(1), std::bind(&ConvexPlaneExtractionROS::callback, this, std::placeholders::_1));
+        elevationMapTopic_, rclcpp::QoS(1).transient_local(),
+        std::bind(&ConvexPlaneExtractionROS::callback, this, std::placeholders::_1));
     filteredmapPublisher_ = node_->create_publisher<grid_map_msgs::msg::GridMap>("filtered_map", 1);
     boundaryPublisher_ = node_->create_publisher<visualization_msgs::msg::MarkerArray>("boundaries", 1);
     insetPublisher_ = node_->create_publisher<visualization_msgs::msg::MarkerArray>("insets", 1);

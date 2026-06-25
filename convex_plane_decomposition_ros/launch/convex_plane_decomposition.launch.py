@@ -50,6 +50,9 @@ def generate_launch_description():
             # Node stays at / so node.yaml parameters load; remap publishes where PerceptiveController subscribes.
             remappings=[
                 ('planar_terrain', '/convex_plane_decomposition_ros/planar_terrain'),
+                ('filtered_map', '/convex_plane_decomposition_ros/filtered_map'),
+                ('boundaries', '/convex_plane_decomposition_ros/boundaries'),
+                ('insets', '/convex_plane_decomposition_ros/insets'),
             ],
         ),
     ])
